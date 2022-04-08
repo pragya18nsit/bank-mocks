@@ -1,4 +1,7 @@
 import {Bank } from "../main/bank";
+import { IStatementPrinter } from "../main/statementPrinter";
+import { mock } from "jest-mock-extended";
+
 
 
 /*
@@ -18,20 +21,21 @@ Date         || Amount    || Balance
 */
 
 describe('Given a client', () => {
-
-    const bank = new Bank();
+    const printer = mock<IStatementPrinter>();
+    const bank = new Bank(printer);
 
     describe('makes a deposit of 1000 on 10-01-2012', () => {
 
+        bank.deposit(1000);
         describe('and a withdrawal of 500 on 14-01-2012', () => {
 
             it("when they print their bank statement they would see", () => {
-
+                
                 const bankStatement = "Date         || Amount    || Balance\n" +
-                    "14/01/2012   ||  -500     || 2500\n" +
-                    "13/01/2012   ||  2000     || 3000\n" +
                     "12/01/2012   ||  1000     || 1000"
-                expect(bank.printStatement()).toEqual(bankStatement);
+    
+                bank.printStatement();    
+                expect(printer.print).toHaveBeenCalledWith(bankStatement);
             });
         });
     });
