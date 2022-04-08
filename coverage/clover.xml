@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1636021366494" clover="3.2.0">
-  <project timestamp="1636021366494" name="All files">
-    <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1" elements="6" coveredelements="3" complexity="0" loc="1" ncloc="1" packages="1" files="1" classes="1"/>
-    <file name="example.ts" path="/Users/pragya.gupta/cazoo/fizzbuzz-PG-CF/src/main/example.ts">
-      <metrics statements="1" coveredstatements="1" conditionals="4" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <line num="1" count="1" type="cond" truecount="1" falsecount="3"/>
+<coverage generated="1649409471179" clover="3.2.0">
+  <project timestamp="1649409471179" name="All files">
+    <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1" elements="7" coveredelements="3" complexity="0" loc="4" ncloc="4" packages="1" files="1" classes="1"/>
+    <file name="bank.ts" path="/Users/pragya.gupta/cazoo/bank-mocks/src/main/bank.ts">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="5" count="0" type="stmt"/>
+      <line num="8" count="0" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
     </file>
   </project>
 </coverage>
